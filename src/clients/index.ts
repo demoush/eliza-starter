@@ -1,4 +1,4 @@
-import { AutoClientInterface } from "@elizaos/client-auto";
+import { AutoTradingClientInterface } from "@elizaos/client-autotrading";
 import { DiscordClientInterface } from "@elizaos/client-discord";
 import { TelegramClientInterface } from "@elizaos/client-telegram";
 import { TwitterClientInterface } from "@elizaos/client-twitter";
@@ -12,7 +12,7 @@ export async function initializeClients(
   const clientTypes = character.clients?.map((str) => str.toLowerCase()) || [];
 
   if (clientTypes.includes("auto")) {
-    const autoClient = await AutoClientInterface.start(runtime);
+    const autoClient = await AutoTradingClientInterface.start(runtime);
     if (autoClient) clients.push(autoClient);
   }
 

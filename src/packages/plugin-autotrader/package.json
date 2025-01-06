@@ -1,0 +1,22 @@
+{
+    "name": "@elizaos/plugin-autotrader",
+    "version": "0.1.0-alpha.0",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "type": "module",
+    "types": "dist/index.d.ts",
+    "dependencies": {
+        "@elizaos/core": "0.1.7",
+        "@solana/web3.js": "1.98.0",
+        "bs58": "6.0.0"
+    },
+    "devDependencies": {
+        "tsup": "8.3.5",
+        "@types/node": "^20.0.0"
+    },
+    "scripts": {
+        "build": "tsup --format esm --dts",
+        "dev": "tsup --format esm --dts --watch",
+        "lint": "eslint --fix  --cache ."
+    }
+}

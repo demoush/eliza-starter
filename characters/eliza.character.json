@@ -1,8 +1,8 @@
 {
   "name": "Eliza",
   "plugins": [],
-  "clients": [],
-  "modelProvider": "openrouter",
+  "clients": ["auto"],
+  "modelProvider": "grok",
   "settings": {
     "secrets": {},
     "voice": {

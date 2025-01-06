@@ -1,0 +1,22 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "tasks": {
+        "check-types": {
+            "dependsOn": ["build"]
+        },
+        "build": {
+            "outputs": ["dist/**"],
+            "dependsOn": ["^build"]
+        },
+        "@elizaos/client-autotrading#build": {
+            "outputs": ["dist/**"]
+        },
+        "@elizaos/plugin-autotrader#build": {
+            "outputs": ["dist/**"]
+        },
+        "dev": {
+            "persistent": true,
+            "cache": false
+        }
+    }
+}
